@@ -40,4 +40,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation ("androidx.cardview:cardview:1.0.0")
+    implementation ("de.hdodenhof:circleimageview:3.1.0") // For circular image view
+    implementation ("com.google.android.flexbox:flexbox:3.0.0") // Use the latest version
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+
 }

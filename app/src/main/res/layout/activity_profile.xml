@@ -1,12 +1,12 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F8F8"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ProfileContent.ProfileActivity"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    tools:context=".ProfileContent.ProfileActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/profileRoot"
@@ -54,11 +54,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:text="Edit"
                 android:textColor="#3399ff"
                 android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -104,11 +104,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                android:gravity="center"
                 android:text="Full Name"
                 android:textColor="#888888"
                 android:textSize="12sp"
                 android:visibility="gone"
-                android:gravity="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/profileImage" />
 
@@ -121,11 +121,11 @@
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/bg_search_input"
                 android:enabled="false"
+                android:gravity="center"
                 android:padding="8dp"
                 android:textColor="#000000"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/fullNameLabel" />
@@ -440,28 +440,37 @@
                         android:textSize="14sp" />
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/infoEmailTextView"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
-                    android:text="● Email: "
-                    android:textColor="#000000"
-                    android:textSize="14sp" />
+                    android:layout_marginBottom="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-                <EditText
-                    android:id="@+id/infoEmailEditText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:enabled="false"
-                    android:inputType="text"
-                    android:text="Other"
-                    android:textColor="#000000"
-                    android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/infoEmailTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="● Email: "
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
 
+                    <EditText
+                        android:id="@+id/infoEmailEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
             </LinearLayout>
+
+
         </androidx.cardview.widget.CardView>
 
         <!-- Save Button (initially hidden) -->
