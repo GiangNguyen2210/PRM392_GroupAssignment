@@ -44,5 +44,7 @@ dependencies {
     implementation ("de.hdodenhof:circleimageview:3.1.0") // For circular image view
     implementation ("com.google.android.flexbox:flexbox:3.0.0") // Use the latest version
     implementation ("androidx.recyclerview:recyclerview:1.2.1")
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
 }
