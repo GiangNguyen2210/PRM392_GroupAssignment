@@ -294,10 +294,8 @@ public class AllergiesDialogFragment extends DialogFragment implements Ingredien
     @Override
     public void onIngredientsSelected(String ingredientType, ArrayList<String> selectedIngredientsList) {
 
-        // store the new selections
         currentMainCategorySelections.put(ingredientType, selectedIngredientsList);
 
-        // rebuild the chips
         selectedIngredientsChipGroup.removeAllViews();
         for (String ing : selectedIngredientsList) {
             View chipView = getLayoutInflater()
