@@ -40,11 +40,17 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation ("androidx.cardview:cardview:1.0.0")
-    implementation ("de.hdodenhof:circleimageview:3.1.0") // For circular image view
-    implementation ("com.google.android.flexbox:flexbox:3.0.0") // Use the latest version
-    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+    implementation (libs.cardview)
+    implementation (libs.circleimageview)
+    implementation (libs.flexbox)
+    implementation (libs.recyclerview)
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-
+    implementation ("androidx.appcompat:appcompat:1.6.1")
+    // OkHttp logging (optional, but helpful)
+    implementation ("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.10.0")
+    // Glide for image/video thumbnails
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
 }
