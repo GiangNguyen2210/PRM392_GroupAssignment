@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_health_item"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp"
+        android:elevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvConditionTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Condition Title"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+            <Switch
+                android:id="@+id/switchCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvConditionSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subtitle"
+            android:textSize="14sp"
+            android:textColor="#777"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+</merge>

@@ -26,6 +26,12 @@
         <activity
             android:name=".RecipeDetail.RecipeDetailActivity"
             android:exported="false" />
+        <activity
+            android:name=".activity.AllergyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HealthConditionsActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
