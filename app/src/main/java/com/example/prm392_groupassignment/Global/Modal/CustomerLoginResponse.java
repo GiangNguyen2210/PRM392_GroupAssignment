@@ -3,13 +3,13 @@ package com.example.prm392_groupassignment.Global.Modal;
 import com.google.gson.annotations.SerializedName;
 
 public class CustomerLoginResponse {
-    @SerializedName("Token")
+    @SerializedName("token")
     private String Token;
 
-    @SerializedName("UPId")
+    @SerializedName("upId")
     private int UPId;
 
-    @SerializedName("Role")
+    @SerializedName("role")
     private String Role;
 
     // Getters

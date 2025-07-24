@@ -1,6 +1,9 @@
 package com.example.prm392_groupassignment.ProfileContent; // Ensure this matches your package
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -86,6 +89,12 @@ public class ProfileActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        SharedPreferences prefs = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE);
+
+        int upId = prefs.getInt("UPId", 3); // returns -1 if not found
+
+        this.userId = String.valueOf(upId);
 
         // Initialize UI elements
         editDiscardButton = findViewById(R.id.editDiscardButton);

@@ -9,6 +9,7 @@ import com.example.prm392_groupassignment.RecipeDetail.RecipeDetailActivity;
 import com.example.prm392_groupassignment.activity.AllergyActivity;
 import com.example.prm392_groupassignment.activity.HealthConditionsActivity;
 import com.example.prm392_groupassignment.activity.LoginActivity;
+import com.example.prm392_groupassignment.activity.WelcomeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,8 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main); // Use a simple layout (e.g., a button or list)
 
         // Navigate to RecipeDetailActivity
-        Intent intent = new Intent(this, LoginActivity.class);
-        Intent intent = new Intent(this, HealthConditionsActivity.class);
+        Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
         finish(); // Optional: Close MainActivity if it’s just a launcher
     }

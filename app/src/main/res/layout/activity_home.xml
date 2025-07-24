@@ -11,14 +11,32 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@android:color/white">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="App Chảo"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:layout_gravity="center" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="App Chảo"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/toolbar_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="12dp"
+                android:src="@android:drawable/ic_dialog_info"
+                android:contentDescription="Settings" />
+        </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
+
 
     <!-- Search -->
     <LinearLayout

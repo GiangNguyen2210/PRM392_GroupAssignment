@@ -1,5 +1,6 @@
 package com.example.prm392_groupassignment.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -56,6 +57,20 @@ public class AllergyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_allergy);
+
+        Button btnBack = findViewById(R.id.btn_back);
+        Button btnContinue = findViewById(R.id.button3);
+
+        btnContinue.setOnClickListener(v -> {
+            // Navigate to NextActivity
+            Intent intent = new Intent(AllergyActivity.this, HealthConditionsActivity.class);
+            startActivity(intent);
+        });
+
+        btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(AllergyActivity.this, GoalActivity.class);
+            startActivity(intent);
+        });
 
         allAllergens = new ArrayList<>();
 

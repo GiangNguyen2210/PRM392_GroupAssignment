@@ -1,5 +1,6 @@
 package com.example.prm392_groupassignment.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -44,6 +45,16 @@ public class GoalActivity extends AppCompatActivity {
         Button btnBack = findViewById(R.id.btn_back);
         Button btnContinue = findViewById(R.id.button3);
 
+        btnContinue.setOnClickListener(v -> {
+            // Navigate to NextActivity
+            Intent intent = new Intent(GoalActivity.this, AllergyActivity.class);
+            startActivity(intent);
+        });
+
+        btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(GoalActivity.this, WelcomeActivity.class);
+            startActivity(intent);
+        });
 
         goalList = new ArrayList<>();
         adapter = new GoalGridAdapter(this, goalList);
@@ -56,20 +67,6 @@ public class GoalActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Goal selectedGoal = goalList.get(position);
                 Toast.makeText(GoalActivity.this, "Bạn đã chọn: " + selectedGoal.getGoalName(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            }
-        });
-
-        btnContinue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Toast.makeText(GoalActivity.this, "Tiếp tục...", Toast.LENGTH_SHORT).show();
             }
         });
     }

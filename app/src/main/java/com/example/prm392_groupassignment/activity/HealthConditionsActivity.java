@@ -1,11 +1,13 @@
 package com.example.prm392_groupassignment.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.Switch;
@@ -49,6 +51,21 @@ public class HealthConditionsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_health_conditions);
+
+        Button btnBack = findViewById(R.id.btn_back);
+        Button btnContinue = findViewById(R.id.button3);
+
+        btnContinue.setOnClickListener(v -> {
+            // Navigate to NextActivity
+            Intent intent = new Intent(HealthConditionsActivity.this, LoginActivity.class);
+            intent.putExtra("mode", "signup");
+            startActivity(intent);
+        });
+
+        btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(HealthConditionsActivity.this, AllergyActivity.class);
+            startActivity(intent);
+        });
 
         container = findViewById(R.id.conditionContainer);
 

@@ -8,6 +8,6 @@ public class LoginRequest {
     public LoginRequest(String email, String password) {
         this.email = email;
         this.password = password;
-        this.deviceToken = "string";
+        this.deviceToken = "1c75d608-0f85-406e-a761-b64db2ebc416";
     }
 }

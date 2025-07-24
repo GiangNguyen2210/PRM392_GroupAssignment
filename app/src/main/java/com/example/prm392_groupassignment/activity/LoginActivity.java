@@ -49,6 +49,13 @@ public class LoginActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE);
 
+        String mode = getIntent().getStringExtra("mode");
+        if ("signup".equalsIgnoreCase(mode)) {
+            isLogin = false;
+        } else {
+            isLogin = true;
+        }
+        
         // Init views
         loginForm = findViewById(R.id.login_form);
         signUpForm = findViewById(R.id.signup_form);

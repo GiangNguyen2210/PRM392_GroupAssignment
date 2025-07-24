@@ -67,6 +67,9 @@
             android:text="I already have an account"
             android:textAlignment="center"
             android:textColor="#FF6B6B"
-            android:textSize="16dp" />
+            android:textSize="16dp"
+            android:clickable="true"
+            android:focusable="true" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
